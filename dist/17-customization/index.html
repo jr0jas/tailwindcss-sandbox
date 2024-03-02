@@ -4,16 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '550px',
+            md: '800px',
+            lg: '1200px',
+            xl: '1440px',
+          },
+          fontFamily: {
+            sans: ['Graphik', 'sans-serif'],
+            serif: ['Merriweather', 'serif'],
+          },
+          extend: {
+            colors: {
+              primary: '#FF5733',
+              secondary: '#FFFC33',
+            },
+            spacing: {
+              5: '3.5rem',
+            },
+          },
+        },
+      }
+    </script>
+
     <title>Customization</title>
   </head>
+  <!-- Tailwind is mobile-first -->
   <body
     class="bg-black sm:bg-green-800 md:bg-primary lg:bg-yellow-800 xl:bg-purple-800 2xl:bg-orange-800"
   >
-    <h1 class="text-white text-xl md:text-3xl xl:text-5xl">
-      Tailwind is awesome
-    </h1>
+    <div class="bg-black p-5">
+      <h1 class="text-white text-xl md:text-3xl md:text-secondary xl:text-5xl">
+        Tailwind is awesome
+      </h1>
+    </div>
 
-    <script src="../bundle.js"></script>
     <script>
       function showBrowserWidth() {
         const width =
@@ -26,6 +55,7 @@
       window.onload = showBrowserWidth
       window.onresize = showBrowserWidth
     </script>
+  <script src="../bundle.js"></script>
   </body>
 </html>
 
