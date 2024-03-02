@@ -3,7 +3,3 @@ node_modules/
 
 # Ignore the package-lock.json file
 package-lock.json
-
-# Ignore all files within the dist folder except index.html
-dist/*
-!dist/index.html
